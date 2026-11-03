@@ -25,12 +25,6 @@ header {
     border-radius: 3rem;
     z-index: 1000;
 }
-.grid > span{
-    grid-column: 1 / -1;  
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-top: 2rem;
-}
 
 .reveal { opacity: 0; transform: translateY(30px); transition: 0.6s ease; }
 .reveal.visible { opacity: 1; transform: none; }
@@ -51,9 +45,16 @@ header.scrolled { background-color: rgba(80, 18, 61, 0.95); }
     position: fixed; bottom: 5rem; left: 50%; transform: translateX(-50%);
     background: #333; color: #fff; padding: 0.8rem 1.5rem; border-radius: 2rem; z-index: 2000;
 }
+.grid > span{
+    grid-column: 1 / -1;  
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
 
 body.dark { 
 background: #1a1a1a; color: #eee; 
+
 }
 #theme-toggle { 
 background: none; 
