@@ -1,11 +1,4 @@
-const menuIcon = document.querySelector('#menu-icon');
-const navLinks = document.querySelector('.nav-links');
-
-menuIcon.onclick = () => {
-    navLinks.classList.toggle('active');
-}
-
-'use strict';
+strict;
 
 const $ = (selector, parent = document) => parent.querySelector(selector);
 const $$ = (selector, parent = document) => [...parent.querySelectorAll(selector)];
@@ -50,17 +43,17 @@ function initActiveNav() {
                     a.classList.toggle('current', a.getAttribute('href') === `#${entry.target.id}`));
             }
         });
-    }, { threshold: 0.5 });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
     sections.forEach((s) => observer.observe(s));
 }
 
 
 const projects = [
     { title: 'Hikayat Putih',      repo: 'https://github.com/Abenis/REPO-NAME' },
-    { title: 'StudentFoodCare',    repo: 'https://github.com/Abenis/REPO-NAME' },
+    { title: 'StudentFoodCare',    repo: 'https://github.com/Abenis/Student-Food-Care-Learning-Module-' },
     { title: 'Birthday Wish Card', repo: 'https://github.com/Abenis/wish-card'},
-    { title: 'Sarawak Heritage Online Auction', repo: 'https://github.com/Abenis/REPO-NAME' },
-    { title: 'Eco Mining',         repo: 'https://github.com/Abenis/REPO-NAME' },
+    { title: 'Sarawak Heritage Online Auction', repo: 'https://github.com/Abenis/Sarawak-Heritage-Online-Auction-System' },
+    { title: 'Eco Mining',         repo: 'https://github.com/Abenis/Eco-Mining---Mining-and-Trash-Collection' },
 ];
 
 function initProjectButtons() {
@@ -117,7 +110,7 @@ function initReveal() {
         entries.forEach((e) => {
             if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
         });
-    }, { threshold: 0.15 });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0.15 });
     $$('.grid-card, .project-card, .section-title').forEach((el) => {
         el.classList.add('reveal');
         observer.observe(el);

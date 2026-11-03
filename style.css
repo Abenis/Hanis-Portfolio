@@ -163,6 +163,8 @@ border-radius: 5rem;
 }
 .btn{
     border-radius: 3rem;
+    color: inherit;
+    background: none;
     padding: 0.5rem 1.5rem;
     border: 2px solid pink;
     cursor: pointer;
@@ -180,6 +182,7 @@ border-radius: 5rem;
 }
 .socials a{
     font-size: 2.5rem;
+    color: inherit;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }   
