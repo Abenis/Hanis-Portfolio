@@ -45,6 +45,12 @@ header.scrolled { background-color: rgba(80, 18, 61, 0.95); }
     position: fixed; bottom: 5rem; left: 50%; transform: translateX(-50%);
     background: #333; color: #fff; padding: 0.8rem 1.5rem; border-radius: 2rem; z-index: 2000;
 }
+.grid > span{
+    grid-column: 1 / -1;  
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
 
 body.dark { 
 background: #1a1a1a; color: #eee; 
@@ -307,8 +313,10 @@ border-radius: 5rem;
 .input-box input{
     border-radius: 3rem;
     border: 2px solid pink;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 1rem 3.5rem; 
     font-size: 1.2rem;
+    width: 100%;
+    max-width: 400px;
 }
 .input-box input::placeholder{
     font-size: 1.2rem;
@@ -319,10 +327,12 @@ border-radius: 5rem;
 
 .input i{
     position: absolute;
-    font-size: 4rem;
+    font-size: 1.3rem;
     top: 50%;
-    left: 10px;
-    transform: translate(50%,-50%);
+    left: 1.5rem;
+    transform: translateY(-50%);
+    color: #ee73e8;
+    pointer-events: none;
 }
 
 footer{

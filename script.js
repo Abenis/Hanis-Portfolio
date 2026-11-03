@@ -48,20 +48,17 @@ function initActiveNav() {
 }
 
 
-const projects = [
-    { title: 'Hikayat Putih',      repo: 'https://github.com/Abenis/REPO-NAME' },
-    { title: 'StudentFoodCare',    repo: 'https://github.com/Abenis/Student-Food-Care-Learning-Module-' },
-    { title: 'Birthday Wish Card', repo: 'https://github.com/Abenis/wish-card'},
-    { title: 'Sarawak Heritage Online Auction', repo: 'https://github.com/Abenis/Sarawak-Heritage-Online-Auction-System' },
-    { title: 'Eco Mining',         repo: 'https://github.com/Abenis/Eco-Mining---Mining-and-Trash-Collection' },
-];
+const projects = {
+    'wish-card':  { repo: 'https://github.com/Abenis/wish-card' },
+    'auction':    { repo: 'https://github.com/Abenis/Sarawak-Heritage-Online-Auction-System' },
+    'eco-mining': { repo: 'https://github.com/Abenis/Eco-Mining---Mining-and-Trash-Collection' },
+};
 
 function initProjectButtons() {
-    $$('.project-card').forEach((card, i) => {
-        const data = projects[i];
-        if (!data) return;
+    $$('.project-card').forEach((card) => {
+        const data = projects[card.dataset.project];
         $$('[data-action]', card).forEach((btn) => {
-            const url = data[btn.dataset.action];
+            const url = data && data[btn.dataset.action];
             if (!url) { btn.remove(); return; }   // no link, so no button
             btn.href = url;
         });
